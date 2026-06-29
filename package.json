@@ -1,15 +1,12 @@
 {
   "name": "qa-playwright-assignment",
   "version": "1.0.0",
-  "description": "Playwright + TypeScript — Sauce Demo UI, Fake Store API, and Reqres API test suites",
+  "description": "Playwright + TypeScript take-home assignment — Sauce Demo UI and Reqres API tests",
   "scripts": {
     "test": "playwright test",
-    "test:ui": "playwright test --project=ui",
-    "test:fakestore": "playwright test --project=fakestore",
-    "test:reqres": "playwright test --project=reqres",
-    "test:assignment-1": "playwright test --project=ui",
-    "test:assignment-2": "playwright test --project=fakestore",
-    "test:headed": "playwright test --project=ui --headed",
+    "test:ui": "playwright test tests/ui",
+    "test:api": "playwright test tests/api",
+    "test:headed": "playwright test --headed",
     "report": "playwright show-report"
   },
   "keywords": ["playwright", "typescript", "qa", "automation"],
