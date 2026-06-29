@@ -1,0 +1,14 @@
+{
+  "keys": [
+    "__v",
+    "date",
+    "id",
+    "products",
+    "userId"
+  ],
+  "productItemKeys": [
+    "productId",
+    "quantity"
+  ],
+  "productCount": 3
+}

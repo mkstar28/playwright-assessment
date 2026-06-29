@@ -5,8 +5,9 @@ export default defineConfig({
   fullyParallel: true,
   forbidOnly: !!process.env.CI,
   retries: process.env.CI ? 2 : 0,
-  workers: process.env.CI ? 1 : undefined,
-  reporter: 'html',
+  workers: process.env.CI ? 2 : undefined,
+  reporter: [['html'], ['list']],
+  snapshotPathTemplate: '{testDir}/{testFileDir}/{testFileName}-snapshots/{arg}{-projectName}{ext}',
   use: {
     trace: 'on-first-retry',
   },
@@ -22,8 +23,15 @@ export default defineConfig({
       },
     },
     {
-      name: 'api',
-      testMatch: /api\/.*\.spec\.ts/,
+      name: 'fakestore',
+      testMatch: /api\/fakestore\/.*\.spec\.ts/,
+      use: {
+        baseURL: 'https://fakestoreapi.com',
+      },
+    },
+    {
+      name: 'reqres',
+      testMatch: /api\/users\.spec\.ts/,
       use: {
         baseURL: 'https://reqres.in',
         extraHTTPHeaders: process.env.REQRES_API_KEY
