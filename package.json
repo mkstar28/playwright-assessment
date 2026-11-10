@@ -9,11 +9,16 @@
     "test:headed": "playwright test --headed",
     "report": "playwright show-report"
   },
-  "keywords": ["playwright", "typescript", "qa", "automation"],
+  "keywords": [
+    "playwright",
+    "typescript",
+    "qa",
+    "automation"
+  ],
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@playwright/test": "^1.61.1",
-    "@types/node": "^26.0.1"
+    "@playwright/test": "^1.65.0",
+    "@types/node": "^26.6.6"
   }
 }
